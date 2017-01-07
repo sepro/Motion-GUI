@@ -15,8 +15,14 @@ Make sure the control panel and stream are available from the network
 
     # Restrict stream connections to localhost only (default: on)
     stream_localhost off
-    # Restrict control connections to localhost only (default: on)
-    webcontrol_localhost off
+
+### Set permissions for www-data to start the service
+
+    sudo visudo -f /etc/sudoers
+
+add the line below and save.    
     
-*NOTE: In my case the webcontrol still couldn't be accessed so I used lighttpd to create a reverse proxy to it*
+    www-data ALL = (root) NOPASSWD: /etc/init.d/motion
+    
+This will allow the user www-data (used by the app) to start and stop without a password.
 
