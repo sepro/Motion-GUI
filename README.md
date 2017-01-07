@@ -11,7 +11,7 @@ You will need to install a few packages and configure your system to use this so
     
     sudo vim /etc/motion/motion.conf
     
-Make sure the control panel and stream are available from the network
+Make sure the stream is available from the network
 
     # Restrict stream connections to localhost only (default: on)
     stream_localhost off
