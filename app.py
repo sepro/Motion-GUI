@@ -13,7 +13,7 @@ app = Flask(__name__)
 def start():
     try:
         args = shlex.split(START_CMD)
-        subprocess.run(args)
+        subprocess.Popen(args)
     except Exception as e:
         return json.dumps({'message': 'failed to start motion service'})
 
@@ -24,7 +24,7 @@ def start():
 def stop():
     try:
         args = shlex.split(STOP_CMD)
-        subprocess.run(args)
+        subprocess.Popen(args)
     except Exception as e:
         return json.dumps({'message': 'failed to stop motion service'})
 
