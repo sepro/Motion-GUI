@@ -1,11 +1,13 @@
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
         <title>Motion GUI</title>
     </head>
     <body>
-    <ul>
-        <li><a href="{{url_for('start')}}">Start</a></li>
-        <li><a href="{{url_for('stop')}}">Stop</a></li>
-    </ul>
+    <h1>Motion GUI</h1>
+    <a href="{{url_for('start')}}" class="button">Start</a> <a href="{{url_for('stop')}}" class="button">Stop</a>
     </body>
 </html>
