@@ -1,3 +1,5 @@
+import shlex, subprocess, json
+
 from flask import Flask
 from flask import render_template
 
@@ -9,12 +11,24 @@ app = Flask(__name__)
 
 @app.route('/start')
 def start():
-    return '/start'
+    try:
+        args = shlex.split(START_CMD)
+        subprocess.run(args)
+    except Exception as e:
+        return json.dumps({'message': 'failed to start motion service'})
+
+    return json.dumps({'message': 'started motion service'})
 
 
 @app.route('/stop')
 def stop():
-    return '/stop'
+    try:
+        args = shlex.split(STOP_CMD)
+        subprocess.run(args)
+    except Exception as e:
+        return json.dumps({'message': 'failed to stop motion service'})
+
+    return json.dumps({'message': 'stopped motion service'})
 
 
 @app.route('/')
