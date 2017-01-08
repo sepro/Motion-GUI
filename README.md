@@ -26,3 +26,16 @@ add the line below and save.
     
 This will allow the user www-data (used by the app) to start and stop without a password.
 
+## Installation
+
+clone the repo
+
+    git clone https://github.com/sepro/Motion-GUI
+
+setup virtualenv and install requirements
+
+    cd Motion-GUI
+    virtualenv --python=python3 venv
+    source env/bin/activate
+    pip install -r requirements.txt
+    
