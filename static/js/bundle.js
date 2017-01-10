@@ -82,9 +82,13 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Motion-GUI'
+	          'div',
+	          { className: 'card' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Motion-GUI'
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -93,12 +97,13 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { className: 'card' },
 	          _react2.default.createElement(
 	            'a',
 	            { href: this.props.start_url },
 	            'start'
 	          ),
+	          ' ',
 	          _react2.default.createElement(
 	            'a',
 	            { href: this.props.stop_url },

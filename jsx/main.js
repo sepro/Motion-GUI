@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 const app = document.getElementById('motiongui');
 
 
@@ -9,11 +8,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
+      <div className="card">
         <h1>Motion-GUI</h1>
+      </div>
         <div>
             image
         </div>
-        <div>
+        <div className="card">
             <a href={this.props.start_url}>start</a> <a href={this.props.stop_url}>stop</a>
         </div>
       </div>

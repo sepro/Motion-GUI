@@ -1,23 +1,22 @@
 {
-  "name": "flask-server-panel",
+  "name": "motion-gui",
   "version": "1.0.0",
-  "description": "A server panel based on react and flask",
+  "description": "GUI for the motion packages using Flask and React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sepro/Flask-Server-Panel.git"
+    "url": "git+https://github.com/sepro/Motion-GUI.git"
   },
   "author": "Sebastian Proost",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sepro/Flask-Server-Panel/issues"
+    "url": "https://github.com/sepro/Motion-GUI/issues"
   },
-  "homepage": "https://github.com/sepro/Flask-Server-Panel#readme",
+  "homepage": "https://github.com/sepro/Motion-GUI#readme",
   "dependencies": {
-    "antd": "^2.6.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-lite": "^0.15.28"
