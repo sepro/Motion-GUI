@@ -7,7 +7,8 @@
         <title>Motion GUI</title>
     </head>
     <body>
-    <h1>Motion GUI</h1>
-    <a href="{{url_for('start')}}" class="button">Start</a> <a href="{{url_for('stop')}}" class="button">Stop</a>
+    <div id="motiongui" start_url="{{ url_for('start') }}" stop_url="{{ url_for('stop') }}" camera_img="192.168.1.25:8081"></div>
+
+    <script src="{{ url_for('static', filename='js/bundle.js') }}"></script>
     </body>
 </html>
