@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/sepro/Motion-GUI#readme",
   "dependencies": {
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8",
-    "react-lite": "^0.15.28"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "rebass": "^0.3.3"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
