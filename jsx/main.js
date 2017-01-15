@@ -1,21 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Container, Card, Heading, Switch} from 'rebass';
+import {Flex, Box} from 'reflexbox';
+import {Container, Card, Divider, Footer, Heading, Label, Switch} from 'rebass';
 
 const app = document.getElementById('motiongui');
 
 
 class App extends React.Component {
+    constructor(props) {
+       super(props);
+       this.state = {running: false};
+    }
+
+    handleClick = (ev) => {
+        ev.preventDefault();
+        this.setState({running: !this.state.running});
+    }
+
   render() {
     return (
-      <Container style="width:256, max-width:256">
-          <Card rounded width={256}>
-            <Heading level={1}>Motion-GUI</Heading>
-            <Switch /><Switch checked />
-            <a href={this.props.start_url}>start</a> <a href={this.props.stop_url}>stop</a>
-          </Card>
-      </Container>
+          <Flex align="center" justify="space-around">
+                  <Card rounded width={320}>
+                    <Heading level={1}>Motion-GUI</Heading>
+                    <Divider />
+                    <Label>Switch camera { this.state.running ? "off" : "on" }</Label>
+                    <Switch onClick={this.handleClick} checked={this.state.running} />
+                    <br />
+                    <a href={this.props.start_url}>start</a> <a href={this.props.stop_url}>stop</a>
+                  </Card>
+          </Flex>
     );
   }
 }

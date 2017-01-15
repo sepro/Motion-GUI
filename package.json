@@ -19,7 +19,8 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "rebass": "^0.3.3"
+    "rebass": "^0.3.3",
+    "reflexbox": "^2.2.3"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
