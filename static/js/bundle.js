@@ -103,13 +103,24 @@
 	                    ),
 	                    _react2.default.createElement(_rebass.Divider, null),
 	                    _react2.default.createElement(
-	                        _rebass.Label,
-	                        null,
-	                        'Switch camera ',
-	                        this.state.running ? "off" : "on"
+	                        _reflexbox.Flex,
+	                        { align: 'center', justify: 'space-between' },
+	                        _react2.default.createElement(
+	                            _reflexbox.Box,
+	                            { auto: true, p: 0 },
+	                            _react2.default.createElement(
+	                                _rebass.Label,
+	                                null,
+	                                'Switch camera ',
+	                                this.state.running ? "off" : "on"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            _reflexbox.Box,
+	                            { p: 0 },
+	                            _react2.default.createElement(_rebass.Switch, { onClick: this.handleClick, checked: this.state.running })
+	                        )
 	                    ),
-	                    _react2.default.createElement(_rebass.Switch, { onClick: this.handleClick, checked: this.state.running }),
-	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: this.props.start_url },

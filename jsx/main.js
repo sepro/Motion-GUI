@@ -20,16 +20,21 @@ class App extends React.Component {
 
   render() {
     return (
-          <Flex align="center" justify="space-around">
-                  <Card rounded width={320}>
-                    <Heading level={1}>Motion-GUI</Heading>
-                    <Divider />
-                    <Label>Switch camera { this.state.running ? "off" : "on" }</Label>
-                    <Switch onClick={this.handleClick} checked={this.state.running} />
-                    <br />
-                    <a href={this.props.start_url}>start</a> <a href={this.props.stop_url}>stop</a>
-                  </Card>
-          </Flex>
+      <Flex align="center" justify="space-around">
+          <Card rounded width={320}>
+            <Heading level={1}>Motion-GUI</Heading>
+            <Divider />
+            <Flex align="center" justify="space-between">
+            <Box auto p={0} >
+                <Label>Switch camera { this.state.running ? "off" : "on" }</Label>
+            </Box>
+            <Box p={0}>
+                <Switch onClick={this.handleClick} checked={this.state.running} />
+            </Box>
+            </Flex>
+            <a href={this.props.start_url}>start</a> <a href={this.props.stop_url}>stop</a>
+          </Card>
+      </Flex>
     );
   }
 }
